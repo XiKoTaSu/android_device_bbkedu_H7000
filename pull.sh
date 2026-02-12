@@ -12,7 +12,7 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$ `; do
         mkdir -p $BASE/$DIR
     fi
     #adb pull /system/$FILE $BASE/$FILE
-    cp /home/john-romero/update/firmware-update/system_/system/$FILE $BASE/$FILE
+    cp firmware/$FILE $BASE/$FILE
 done
 
 ./setup-makefiles.sh
